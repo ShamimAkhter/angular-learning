@@ -1,4 +1,4 @@
-<!-- <favorite></favorite> -->
 <favorite 
   [isFavorite]="post.isFavorite" 
+  (change)="onFavoriteChange($event)"
   ></favorite>
