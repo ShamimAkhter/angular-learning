@@ -1,4 +1,34 @@
+<!-- Approach 1
+<div *ngIf="courses.length > 0">
+  List of courses
+</div>
+<div *ngIf="courses.length === 0">
+  No courses yet
+</div> -->
 
-<like
-  [likesCount]="tweet.likesCount"
-  [isActive]="tweet.isLiked"></like>
+<!-- Approach 2
+<div *ngIf="courses.length > 0; else noCourses">
+  List of courses
+</div>
+<ng-template #noCourses>
+  No courses yet
+</ng-template> -->
+
+<!-- Approach 3 -->
+<div *ngIf="courses.length > 0; then coursesList else noCourses">
+</div>
+<ng-template #coursesList>
+  List of courses
+</ng-template>
+<ng-template #noCourses>
+  No courses yet
+</ng-template>
+
+<hr>
+<!-- Approach 4, using hidden property -->
+<div [hidden]="courses.length == 0">
+  List of courses
+</div>
+<div [hidden]="courses.length > 0">
+  No courses yet
+</div>
