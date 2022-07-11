@@ -7,12 +7,9 @@ import { FavoriteChangeEventArgs } from './favorite/favorite.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  post = {
-    title: "Title",
-    isFavorite: true
-  }
-
-  onFavoriteChange(eventArgs: FavoriteChangeEventArgs) {
-    console.log('Favorite changed', eventArgs);
+  tweet = {
+    body: 'Here is the body of a tweet...',
+    isLiked: false,
+    likesCount: 5
   }
 }
