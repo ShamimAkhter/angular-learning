@@ -1,1 +1,25 @@
-<favorite></favorite>
+
+<!-- 
+<button
+  [style.backgroundColor]="canSave ? 'blue' : 'gray'"
+  [style.color]="canSave ? 'white' : 'black'"
+  [style.fontWeight]="canSave ? 'bold' : 'normal'"
+  
+  (click)="canSave = !canSave"
+>
+Save
+</button>  -->
+
+<!-- ngStyle -->
+
+<button
+  [ngStyle]="{
+    'backgroundColor': canSave ? 'blue' : 'gray',
+    'color': canSave ? 'white' : 'black',
+    'fontWeight': canSave ? 'bold' : 'normal'
+  }"
+  
+  (click)="canSave = !canSave"
+>
+Save
+</button> 
