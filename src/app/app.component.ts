@@ -9,7 +9,7 @@ import { FavoriteChangeEventArgs } from './favorite/favorite.component';
 export class AppComponent {
   courses: { id: number; name: string }[] = [];
 
-  loadCourses() {
+  addCourse() {
     this.courses = [
       { id: 1, name: 'course1' },
       { id: 2, name: 'course2' },
@@ -17,7 +17,7 @@ export class AppComponent {
     ];
   }
 
-  trackCourse(index: number, course: { id: number; name: string }) {
-    course ? course.id : undefined;
+  removeCourse() {
+    this.courses = [];
   }
 }

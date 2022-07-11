@@ -1,6 +1,22 @@
-<button (click)="loadCourses()">Load Courses</button>
-<ul>
-  <li *ngFor="let course of courses; trackBy: trackCourse">
-    {{ course.name }}
-  </li>
-</ul>
+<button (click)="addCourse()">Add Course</button>
+<button (click)="removeCourse()">Remove Course</button>
+<hr>
+
+<!-- 
+<div *ngIf="courses.length > 0; else noCourses">
+  List of courses
+</div>
+<ng-template #noCourses>
+  No courses
+</ng-template> -->
+
+<!-- angular rewrites above as: -->
+
+<ng-template [ngIf]="courses.length > 0">
+  <div>
+    List of courses
+  </div>
+</ng-template>
+<ng-template [ngIf]="!(courses.length > 0)">
+  No courses
+</ng-template>
